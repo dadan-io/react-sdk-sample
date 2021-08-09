@@ -5,7 +5,7 @@ A lightweight React Sample that shows how to checking, validating, and manipulat
 ## Install
 
 ```bash
-npm i
+npm install
 ```
 
 ## Usage
