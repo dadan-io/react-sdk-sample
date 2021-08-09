@@ -10,13 +10,11 @@ npm install
 
 ## Usage
 
-In your html page include the follwing
+In your App.js import the following
 
-```html
-<div id="record-video-button"></div>
-<!--the div container which holds the button-->
-<input type="text" id="return-control-id" />
-<!--the input text which will holds sharedUrl-->
+```javascript
+import React, { useState } from "react";
+import { RecordVideoButton } from "react-dadan-extension";
 ```
 
 In script tag include the following
