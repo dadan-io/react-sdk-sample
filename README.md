@@ -1,6 +1,6 @@
 # React Dadan SDK Sample
 
-A lightweight React app that shows how to use [react-dadan-extension](https://www.npmjs.com/package/react-dadan-sdk) package , which used for checking, validating, and manipulating [Google Dadan Extension](https://haal.link.sa/onboarding/download) with React.
+A lightweight React app that shows how to use [react-dadan-sdk](https://www.npmjs.com/package/react-dadan-sdk) package , which used for checking, validating, and manipulating [Google Dadan Extension](https://haal.link.sa/onboarding/download) with React.
 
 ## Install
 
