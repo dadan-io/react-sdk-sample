@@ -20,7 +20,7 @@ import { RecordVideoButton } from "react-dadan-extension";
 In your component copy & paste the following
 
 ```javascript
-function MyComponent() {
+function YourComponent() {
   const [videos, setVideos] = useState([]);
   return (
     <>
