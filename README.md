@@ -1,6 +1,6 @@
 # React Dadan Extension Sample
 
-A lightweight React Sample that shows how to use react-dadan-extension package , which used for checking, validating, and manipulating Google Dadan Extension with React.
+A lightweight React Sample that shows how to use [react-dadan-extension](https://www.npmjs.com/package/react-dadan-extension) package , which used for checking, validating, and manipulating Google Dadan Extension with React.
 
 ## Install
 
