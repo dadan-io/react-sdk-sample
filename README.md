@@ -10,31 +10,34 @@ npm install
 
 ## Usage
 
-In your App.js import the following
+In your component import the following
 
 ```javascript
 import React, { useState } from "react";
 import { RecordVideoButton } from "react-dadan-extension";
 ```
 
-In script tag include the following
+In your component copy & paste the following
 
 ```javascript
-const recordVideoButton = new RecordVideoButton(
-  {
-    containerId: "record-video-button",
-    title: "Select Video",
-    type: "select",
-    buttonClass: "dd__record__button__default__class",
-    buttonStyle: "",
-    showSvg: true,
-    showPreview: true,
-    copyToClipboard: true,
-    returnControlId: "return-control-id",
-  },
-  handleResponse, // handle success
-  handleResponse // handle failure
-);
+function MyComponent() {
+  const [videos, setVideos] = useState([]);
+  return (
+    <>
+      <RecordVideoButton
+        showSvg={true}
+        title="Select Video"
+        copyToClipboard={true}
+        showPreview={true}
+        type="select"
+        buttonClass="dd__record__button__default__class"
+        buttonStyle={{}}
+        onFailure={handleResponse}
+        onSuccess={handleResponse}
+      />
+    </>
+  );
+}
 ```
 
 the handleResponse function , is a callback function which accept object with three parameters
@@ -45,9 +48,10 @@ function handleResponse({ success, data, message }) {
     // only false when user close extension
     if (data) {
       // represnts the selected videos , or recorded video object after stop recording
-      console.table(data);
+      setVideos(data);
     }
   } else {
+    setVideos([]);
     console.error(message); //User Closed Extension
   }
 }
