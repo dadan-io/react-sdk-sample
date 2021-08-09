@@ -10,17 +10,17 @@ npm install
 
 ## Usage
 
-In your component import the following
+In App.js we import the following
 
 ```javascript
 import React, { useState } from "react";
 import { RecordVideoButton } from "react-dadan-extension";
 ```
 
-In your component copy & paste the following
+In App.js copy & paste the following
 
-```javascript
-function YourComponent() {
+```jsx
+function App() {
   const [videos, setVideos] = useState([]);
   return (
     <>
