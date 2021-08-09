@@ -1,6 +1,6 @@
-# React Dadan Extension Sample
+# React Dadan SDK Sample
 
-A lightweight React app that shows how to use [react-dadan-extension](https://www.npmjs.com/package/react-dadan-extension) package , which used for checking, validating, and manipulating [Google Dadan Extension](https://haal.link.sa/onboarding/download) with React.
+A lightweight React app that shows how to use [react-dadan-extension](https://www.npmjs.com/package/react-dadan-sdk) package , which used for checking, validating, and manipulating [Google Dadan Extension](https://haal.link.sa/onboarding/download) with React.
 
 ## Install
 
@@ -14,7 +14,7 @@ In App.js we import the following
 
 ```javascript
 import React, { useState } from "react";
-import { RecordVideoButton } from "react-dadan-extension";
+import { RecordVideoButton } from "react-dadan-sdk";
 ```
 
 In App.js we add RecordVideoButton component the following

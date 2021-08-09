@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RecordVideoButton } from "react-dadan-extension";
+import { RecordVideoButton } from "react-dadan-sdk";
 function App() {
   const [videos, setVideos] = useState([]);
   return (

@@ -8916,11 +8916,6 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
-react-dadan-extension@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/react-dadan-extension/-/react-dadan-extension-3.2.0.tgz#16c104d41d47076f75e7f1dca001557b04565c06"
-  integrity sha512-41FftBfoCrSE2zsJBSebD41JD0ijFxigxc5VGbzelJ2+uKQtaEV4FpSXKa6a9P5WbuudPZKYrEc/0lLkSKwlnQ==
-
 react-dev-utils@^11.0.3:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.4.tgz#a7ccb60257a1ca2e0efe7a83e38e6700d17aa37a"
