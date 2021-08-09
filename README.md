@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Dadan Sdk CDN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A lightweight JavaScript library for checking, validating, and manipulating Google Dadan Extension.
 
-## Available Scripts
+## How It Works ?
 
-In the project directory, you can run:
+import the following scripts into your web page
 
-### `yarn start`
+```bash
+<script src="https://resources-dadan-io.s3.eu-central-1.amazonaws.com/sdk/dadan-extension-core.js"></script>
+<scrip src="https://resources-dadan-io.s3.eu-central-1.amazonaws.com/sdk/dadan-extension-cdn.js"></script>
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+In your html page include the follwing
 
-### `yarn test`
+```html
+<div id="record-video-button"></div>
+<!--the div container which holds the button-->
+<input type="text" id="return-control-id" />
+<!--the input text which will holds sharedUrl-->
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In script tag include the following
 
-### `yarn build`
+```javascript
+const recordVideoButton = new RecordVideoButton(
+  {
+    containerId: "record-video-button",
+    title: "Select Video",
+    type: "select",
+    buttonClass: "dd__record__button__default__class",
+    buttonStyle: "",
+    showSvg: true,
+    showPreview: true,
+    copyToClipboard: true,
+    returnControlId: "return-control-id",
+  },
+  handleResponse, // handle success
+  handleResponse // handle failure
+);
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+the handleResponse function , is a callback function which accept object with three parameters
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```javascript
+function handleResponse({ success, data, message }) {
+  if (success) {
+    // only false when user close extension
+    if (data) {
+      // represnts the selected videos , or recorded video object after stop recording
+      console.table(data);
+    }
+  } else {
+    console.error(message); //User Closed Extension
+  }
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Record Button Object Options
 
-### `yarn eject`
+| Parameter         | Type      | Description                                                                                 |
+| :---------------- | :-------- | :------------------------------------------------------------------------------------------ |
+| `containerId`     | `string`  | **Required**. the container id that holds the button                                        |
+| `title`           | `string`  | **Required**. button title                                                                  |
+| `type`            | `string`  | **Required**. either record or select , else will show error                                |
+| `buttonClass`     | `string`  | **Optional**. the default class , or your custom class                                      |
+| `buttonStyle`     | `string`  | **Optional**. the default style , or your custom style as string                            |
+| `showSvg`         | `boolean` | **Optional**. to show Svg icon in button                                                    |
+| `showPreview`     | `boolean` | **Optional**. to show preview dialog of recorded video                                      |
+| `copyToClipboard` | `boolean` | **Optional**. to notify user that video shared url was copied to clipboard as toast message |
+| `returnControlId` | `string`  | **Optional**. the input text id which will holds sharedUrl of recorded video                |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
