@@ -17,7 +17,7 @@ import React, { useState } from "react";
 import { RecordVideoButton } from "react-dadan-extension";
 ```
 
-In App.js we add the following
+In App.js we add RecordVideoButton component the following
 
 ```jsx
 function App() {
