@@ -1,6 +1,6 @@
-# Dadan Sdk CDN
+# React Dadan Extension
 
-A lightweight JavaScript library for checking, validating, and manipulating Google Dadan Extension.
+A lightweight React component for checking, validating, and manipulating Google Dadan Extension.
 
 ## How It Works ?
 
