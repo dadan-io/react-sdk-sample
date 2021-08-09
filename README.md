@@ -1,11 +1,11 @@
-# React Dadan Extension
+# React Dadan Extension Sample
 
-A lightweight React component for checking, validating, and manipulating Google Dadan Extension.
+A lightweight React Sample that shows how to checking, validating, and manipulating Google Dadan Extension with React.
 
 ## Install
 
 ```bash
-npm i react-dadan-extension
+npm i
 ```
 
 ## Usage
