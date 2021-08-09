@@ -2,13 +2,10 @@
 
 A lightweight React component for checking, validating, and manipulating Google Dadan Extension.
 
-## How It Works ?
-
-import the following scripts into your web page
+## Install
 
 ```bash
-<script src="https://resources-dadan-io.s3.eu-central-1.amazonaws.com/sdk/dadan-extension-core.js"></script>
-<scrip src="https://resources-dadan-io.s3.eu-central-1.amazonaws.com/sdk/dadan-extension-cdn.js"></script>
+npm i react-dadan-extension
 ```
 
 ## Usage
