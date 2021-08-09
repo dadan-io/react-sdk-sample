@@ -57,19 +57,17 @@ function handleResponse({ success, data, message }) {
 }
 ```
 
-## Record Button Object Options
+## Record Button Props
 
 | Parameter         | Type      | Description                                                                                 |
 | :---------------- | :-------- | :------------------------------------------------------------------------------------------ |
-| `containerId`     | `string`  | **Required**. the container id that holds the button                                        |
-| `title`           | `string`  | **Required**. button title                                                                  |
 | `type`            | `string`  | **Required**. either record or select , else will show error                                |
+| `title`           | `string`  | **Optional**. button title                                                                  |
 | `buttonClass`     | `string`  | **Optional**. the default class , or your custom class                                      |
-| `buttonStyle`     | `string`  | **Optional**. the default style , or your custom style as string                            |
+| `buttonStyle`     | `object`  | **Optional**. the default style , or your custom style as string                            |
 | `showSvg`         | `boolean` | **Optional**. to show Svg icon in button                                                    |
 | `showPreview`     | `boolean` | **Optional**. to show preview dialog of recorded video                                      |
 | `copyToClipboard` | `boolean` | **Optional**. to notify user that video shared url was copied to clipboard as toast message |
-| `returnControlId` | `string`  | **Optional**. the input text id which will holds sharedUrl of recorded video                |
 
 ## License
 
